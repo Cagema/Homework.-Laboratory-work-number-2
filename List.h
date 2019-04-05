@@ -53,11 +53,7 @@ List<T>::List()
 }
 
 
-template<typename T>
-List<T>::~List()
-{
-	clear();
-}
+
 
 template<typename T>
 void List<T>::pop_front()
@@ -225,3 +221,8 @@ inline std::ostream & operator<<(std::ostream & out, List<T> list)
 	return out;
 }
 
+template<typename T>
+List<T>::~List()
+{
+	clear();
+}

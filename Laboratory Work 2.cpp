@@ -1,27 +1,23 @@
 ﻿#include "pch.h"
 #include <iostream>
 #include "Map.h"
-#include "List.h"
 
 using namespace std;
 
 int main(int argc, char* argv[]) {
 
-	Map<int, int> lst;
+	Map<char, int> lst;
 
 	cout << "\n~Now make tree and show result~\n\n";
 
-	lst.insert(7, 5);
+	lst.insert('a', 5);
+	lst.insert('b', 4);
+	lst.insert('c', 3);
+	lst.insert('d', 2);
+	lst.insert('e', 1);
 	lst.show();
 
-	cout << lst.get_values();
-
-	/*List<char> listofkey;
-	listofkey = lst.get_keys();
-	cout << listofkey << endl;
-	listofkey.clear();*/
-
-	/*cout << "\n~Now remove node with key d and show result~\n\n";
+	cout << "\n~Now remove node with key d and show result~\n\n";
 	lst.remove('d');
 	lst.show();
 
@@ -31,7 +27,7 @@ int main(int argc, char* argv[]) {
 	cout << "\n\n~Now clear tree and show result~\n";
 	lst.clear();
 	lst.show();
-	cout << "\n";*/
+	cout << "\n";
 
 	return 0;
 }

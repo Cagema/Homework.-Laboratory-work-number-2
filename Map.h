@@ -6,7 +6,7 @@ using namespace std;
 template <typename T, typename T1>
 class MapNode {
 public:
-	//MapNode();
+	MapNode();
 	MapNode(T key, T1 value);
 	~MapNode();
 	T key;
@@ -17,7 +17,7 @@ public:
 	MapNode *parent;
 };
 
-/*template<typename T, typename T1>
+template<typename T, typename T1>
 MapNode<T, T1>::MapNode() {
 	this->key = (T)nullptr;
 	this->value = (T1)nullptr;
@@ -25,7 +25,7 @@ MapNode<T, T1>::MapNode() {
 	right = nullptr;
 	parent = nullptr;
 	color = true;
-}*/
+}
 
 template<typename T, typename T1>
 MapNode<T, T1>::MapNode(T key, T1 value) {
@@ -413,9 +413,9 @@ void Map<T, T1>::helpClear(MapNode<T, T1> *currentNode) {
 
 template<typename T, typename T1>
 List<T> Map<T, T1>::get_keys() {
-	List<T> listOfKeys;
-	creatingListOfKeys(root, listOfKeys);
-	return listOfKeys;
+	List<T>* listOfKeys = new List<T>;
+	creatingListOfKeys(root, *listOfKeys);
+	return *listOfKeys;
 }
 
 template<typename T, typename T1>
@@ -427,11 +427,11 @@ void Map<T, T1>::creatingListOfKeys(MapNode<T, T1> *node, List<T> &listOfKeys) {
 	}
 }
 
-template<typename T, typename T1>
-List<T1> Map<T, T1>::get_values() {
-	List<T1> listOfValues;
-	creatingListOfValues(root, listOfValues);
-	return listOfValues;
+template<class T, class T1>
+inline List<T1> Map<T, T1>::get_values() {
+	List<T1>* listOfValues = new List<T>;
+	creatingListOfValues(root, *listOfValues);
+	return *listOfValues;
 }
 
 template<typename T, typename T1>
