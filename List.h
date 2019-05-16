@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "../Laboratory work 2/Laboratory Work 2/Laboratory Work 2/pch.h"
 #include <stdio.h>
 #include <iostream> 
 using namespace std;

@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "List.h"
 #include <iostream>
 using namespace std;
@@ -63,7 +62,7 @@ public:
 		MapNode<T, T1> copy = *root;
 		return copy;
 	}
-	short int getSize() { return size; }
+	int getSize() { return size; }
 	
 private:
 	void leftRotation(MapNode<T, T1> *elemX);
@@ -73,7 +72,7 @@ private:
 	void helpClear(MapNode<T, T1> *currentNode);
 	void creatingListOfKeys(MapNode<T, T1> *currentNode, List<T> &list);
 	void creatingListOfValues(MapNode<T, T1> *currentNode, List<T1> &list);
-	short int size = 0;
+	int size = 0;
 	MapNode<T, T1> *root;
 };
 
